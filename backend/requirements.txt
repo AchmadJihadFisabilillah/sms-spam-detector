@@ -1,0 +1,13 @@
+fastapi==0.136.1
+uvicorn[standard]==0.47.0
+pandas==3.0.3
+numpy==2.4.6
+scikit-learn==1.8.0
+statsmodels==0.14.6
+joblib==1.5.3
+python-multipart==0.0.29
+pydantic==2.13.4
+kaggle==2.1.2
+deep-translator==1.11.4
+beautifulsoup4==4.15.0
+requests==2.34.2
