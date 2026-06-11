@@ -11,11 +11,11 @@ dist/
 .vite/
 
 # Project artifacts
-backend/artifacts/*.joblib
-backend/artifacts/*.json
-backend/artifacts/*.csv
-backend/data/spam.csv
-backend/data/*.zip
+# backend/artifacts/*.joblib
+# backend/artifacts/*.json
+# backend/artifacts/*.csv
+# backend/data/spam.csv
+# backend/data/*.zip
 
 # OS
 .DS_Store

@@ -1,0 +1,145 @@
+{
+  "project": "SMS Spam Detection Final Project",
+  "trained_at": "2026-06-04T01:27:50.089774+00:00",
+  "dataset": {
+    "path": "data\\spam.csv",
+    "total_rows": 5169,
+    "train_rows": 3618,
+    "test_rows": 1551,
+    "label_distribution": {
+      "ham": 4516,
+      "spam": 653
+    },
+    "test_size": 0.3,
+    "random_state": 42,
+    "max_features": 8000
+  },
+  "models": [
+    {
+      "model_key": "naive_bayes",
+      "model_name": "Multinomial Naive Bayes",
+      "accuracy": 0.9825918762088974,
+      "precision": 1.0,
+      "recall": 0.8622448979591837,
+      "f1_score": 0.9260273972602739,
+      "roc_auc": 0.9954853528127118,
+      "pr_auc": 0.9833430923899256,
+      "log_loss": 0.05153539319447932,
+      "brier_score": 0.012571645756145552,
+      "confusion_matrix": [
+        [
+          1355,
+          0
+        ],
+        [
+          27,
+          169
+        ]
+      ],
+      "classification_report": {
+        "ham": {
+          "precision": 0.9804630969609262,
+          "recall": 1.0,
+          "f1-score": 0.9901351845085861,
+          "support": 1355.0
+        },
+        "spam": {
+          "precision": 1.0,
+          "recall": 0.8622448979591837,
+          "f1-score": 0.9260273972602739,
+          "support": 196.0
+        },
+        "accuracy": 0.9825918762088974,
+        "macro avg": {
+          "precision": 0.9902315484804631,
+          "recall": 0.9311224489795918,
+          "f1-score": 0.9580812908844301,
+          "support": 1551.0
+        },
+        "weighted avg": {
+          "precision": 0.9829319770354965,
+          "recall": 0.9825918762088974,
+          "f1-score": 0.9820338780607014,
+          "support": 1551.0
+        }
+      },
+      "calibration_score": 0.9874283542438544,
+      "final_score": 0.958232025277145
+    },
+    {
+      "model_key": "logistic_regression",
+      "model_name": "Logistic Regression",
+      "accuracy": 0.9819471308833011,
+      "precision": 0.9329896907216495,
+      "recall": 0.923469387755102,
+      "f1_score": 0.9282051282051282,
+      "roc_auc": 0.994950673996536,
+      "pr_auc": 0.9796353038385266,
+      "log_loss": 0.11865468762768155,
+      "brier_score": 0.022346666371954125,
+      "confusion_matrix": [
+        [
+          1342,
+          13
+        ],
+        [
+          15,
+          181
+        ]
+      ],
+      "classification_report": {
+        "ham": {
+          "precision": 0.9889462048636699,
+          "recall": 0.9904059040590406,
+          "f1-score": 0.9896755162241888,
+          "support": 1355.0
+        },
+        "spam": {
+          "precision": 0.9329896907216495,
+          "recall": 0.923469387755102,
+          "f1-score": 0.9282051282051282,
+          "support": 196.0
+        },
+        "accuracy": 0.9819471308833011,
+        "macro avg": {
+          "precision": 0.9609679477926597,
+          "recall": 0.9569376459070713,
+          "f1-score": 0.9589403222146585,
+          "support": 1551.0
+        },
+        "weighted avg": {
+          "precision": 0.9818749754814418,
+          "recall": 0.9819471308833011,
+          "f1-score": 0.9819074981379631,
+          "support": 1551.0
+        }
+      },
+      "calibration_score": 0.9776533336280459,
+      "final_score": 0.9534201639206427
+    }
+  ],
+  "best_model": "naive_bayes",
+  "mcnemar_test": {
+    "table": [
+      [
+        1509,
+        15
+      ],
+      [
+        14,
+        13
+      ]
+    ],
+    "statistic": 0.0,
+    "p_value": 1.0,
+    "exact_test": false,
+    "alpha": 0.05,
+    "is_significant": false,
+    "interpretation": "Perbedaan performa kedua model tidak signifikan secara statistik."
+  },
+  "artifacts": {
+    "naive_bayes_model": "artifacts\\naive_bayes_model.joblib",
+    "logistic_regression_model": "artifacts\\logistic_regression_model.joblib",
+    "predictions": "artifacts\\test_predictions.csv"
+  }
+}
